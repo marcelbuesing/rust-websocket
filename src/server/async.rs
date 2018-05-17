@@ -46,6 +46,17 @@ impl WsServer<NoTlsAcceptor, TcpListener> {
 		})
 	}
 
+	/// Bind a websocket server to an address.
+	/// This is the same as bind but uses the default reactor instead of an explicit &Handle.
+	/// Creating a websocket server can be done immediately so this does not
+	/// return a `Future` but a simple `Result`.
+	  pub fn bind2(addr: &SocketAddr) -> io::Result<Self> {
+		    Ok(Server {
+			      listener: TcpListener::bind(addr)?,
+			      ssl_acceptor: NoTlsAcceptor,
+		    })
+	  }
+
 	/// Turns the server into a stream of connection objects.
 	///
 	/// Each item of the stream is the address of the incoming connection and an `Upgrade`
