@@ -1,6 +1,5 @@
 use std::mem;
 use std::str::FromStr;
-use std::convert::TryFrom;
 
 use base64;
 use http::header::HeaderValue;
@@ -63,12 +62,12 @@ impl From<WebSocketKey> for HeaderValue {
 	}
 }
 
-impl TryFrom<HeaderValue> for WebSocketKey {
-	type Error = ();
-	fn try_from(value: HeaderValue) -> Result<WebSocketKey, ()> {
-		Ok(WebSocketKey([0u8; 16]))
-	}
-}
+// impl TryFrom<HeaderValue> for WebSocketKey {
+// 	type Error = ();
+// 	fn try_from(value: HeaderValue) -> Result<WebSocketKey, ()> {
+// 		Ok(WebSocketKey([0u8; 16]))
+// 	}
+// }
 
 impl fmt::Display for WebSocketKey {
 	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
