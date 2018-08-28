@@ -33,9 +33,7 @@ tokio-tls = { version = "0.1.4", optional = true }
 futures = { version = "0.1.19", optional = true }
 bytes = { version = "0.4", optional = true }
 native-tls = { version = "^0.1.2", optional = true }
-
-[dependencies.hyper]
-git = "https://github.com/hyperium/hyper"
+hyper = "0.12"
 
 [dev-dependencies]
 futures-cpupool = "0.1"
