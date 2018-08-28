@@ -27,8 +27,8 @@ byteorder = "1.0"
 sha1 = "0.2"
 base64 = "0.5"
 http = "0.1.5"
-tokio = { version = "0.1.4", optional = true }
-tokio-io = { version = "0.1.6", optional = true }
+tokio = { version = "0.1.8", optional = true }
+tokio-io = { version = "0.1.8", optional = true }
 tokio-tls = { version = "0.1.4", optional = true }
 futures = { version = "0.1.19", optional = true }
 bytes = { version = "0.4", optional = true }
