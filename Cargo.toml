@@ -29,10 +29,10 @@ base64 = "0.5"
 http = "0.1.5"
 tokio = { version = "^0.1.7", optional = true }
 tokio-io = { version = "^0.1.7", optional = true }
-tokio-tls = { version = "0.1.4", optional = true }
+tokio-tls = { version = "0.2", optional = true }
 futures = { version = "0.1.19", optional = true }
 bytes = { version = "0.4", optional = true }
-native-tls = { version = "^0.1.2", optional = true }
+native-tls = { version = "^0.2.1", optional = true }
 hyper = "0.12"
 
 [dev-dependencies]
